@@ -1,0 +1,9 @@
+{% import "guide/macros.twig" as guide %}
+<div class="debug hid">
+    {{ at.guide.data|json_encode() }}
+</div>
+<ul class="guide-toplevel">
+    {% for section in at.guide.data.guideSections %}
+        {{ guide.section(section) }}
+    {% endfor %}
+</ul>
