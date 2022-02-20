@@ -54,6 +54,10 @@
 
     $twig -> addGlobal("at", $at);
 
+    $twig -> addFilter (
+        new \Twig\TwigFilter("base64_encode", function($a){return base64_encode($a);})
+    );
+
     function redirect($url) {
         header("Location: " . $url);
     }

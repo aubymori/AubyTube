@@ -104,7 +104,7 @@
               yt.setConfig('DISMISS_THROUGH_IT', true);
           
                 yt.setConfig({
-                  'GUIDE_SELECTED_ITEM': "{{ at.guideItemId }}",
+                  'GUIDE_SELECTED_ITEM': "{{ pageId|base64_encode }}%3D",
                   'GUIDE_DELAY_LOAD': {{ guidePinning ? "false" : "true" }}
                 });
           

@@ -2,7 +2,7 @@
     {% if item.guideItem %}
         {% set this = item.guideItem %}
         <li id="{{ this.id ?? "" }}-guide-item" class="guide-channel guide-notification-item overflowable-list-item">
-            <a href="{{ this.href }}" class="guide-item yt-valign spf-link" title="{{ this.label.text }}" data-serialized-endpoint="{{ this.idBase64 }}">
+            <a href="{{ this.href }}" class="guide-item yt-valign spf-link" title="{{ this.label.text }}" data-serialized-endpoint="{{ this.id|base64_encode }}%3D">
                 <span class="yt-valign-container">
                     {% if this.icon %}
                         <span class="thumb guide-{{ this.icon.type }}-icon yt-sprite"></span>
